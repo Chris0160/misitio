@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    
+    <!-- Enlace al CDN de Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #fff; /* Color de fondo blanco */
+            color: #000; /* Color de texto */
+            font-family: Arial, sans-serif; /* Fuente del texto */
+        }
+        
+        /* Estilos para el menú (mismo que en la página de inicio) */
+        .navbar {
+            background-color: #58B2AF; /* Color de fondo del menú */
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbar-nav a {
+            color: #fff; /* Color del texto del menú */
+        }
+
+        /* Estilos para el carrusel */
+        .carousel-indicators li {
+            border: 2px solid #58B2AF; /* Borde de los indicadores */
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            background-color: #58B2AF; /* Color de fondo de las flechas */
+        }
+
+        /* Estilos para las modales (modals) */
+        .modal-content {
+            background-color: #fff; /* Color de fondo de las modales */
+        }
+
+        .modal-title {
+            color: #000; /* Color del título de la modal */
+        }
+
+        .modal-body {
+            background-color: #f7f7f7; /* Color de fondo del cuerpo de la modal */
+            color: #000; /* Color del texto en el cuerpo de la modal */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Menú de navegación (mismo que en la página de inicio) -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Inicio</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="equipo.html">Equipo</a></li>
+            <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Jumbotron con carrusel de noticias -->
+<div class="jumbotron">
+    <h1>Últimas Noticias</h1>
+    <div id="noticiasCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicadores de noticias -->
+        <ol class="carousel-indicators">
+            <li data-target="#noticiasCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#noticiasCarousel" data-slide-to="1"></li>
+            <li data-target="#noticiasCarousel" data-slide-to="2"></li>
+            <li data-target="#noticiasCarousel" data-slide-to="3"></li>
+            <li data-target="#noticiasCarousel" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Carrusel de noticias -->
+        <div class="carousel-inner">
+            <!-- Noticia 1 -->
+            <div class="carousel-item active">
+                <img src="images/noticia1.jpg" alt="Noticia 1" width="600" height="400">
+                <div class="carousel-caption">
+                    <h3>Noticia 1</h3>
+                    <p>Texto de la Noticia 1 con color de fondo.</p>
+                    <a href="#modalNoticia1" data-toggle="modal" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+            <!-- Noticia 2 (replica el formato de Noticia 1) -->
+            <!-- ... -->
+        </div>
+
+        <!-- Flechas de control del carrusel -->
+        <a class="carousel-control-prev" href="#noticiasCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#noticiasCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+</div>
+
+<!-- Modales para cada noticia -->
+<!-- Noticia 1 -->
+<div class="modal fade" id="modalNoticia1" tabindex="-1" role="dialog" aria-labelledby="modalNoticia1Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalNoticia1Label">Noticia 1</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Texto detallado de la Noticia 1.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Noticia 2 (replica el formato de Noticia 1) -->
+<!-- ... -->
+
+<!-- Enlace al CDN de Bootstrap JS (opcional) -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
